@@ -1,0 +1,27 @@
+.button {
+    position: relative;
+    background-image: linear-gradient(45deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    z-index: 1;
+  }
+  
+  .button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, rgba(148, 187, 233, 1) 0%, rgba(238, 174, 202, 1) 100%);
+    transition: opacity 1.5s ease-out;
+    z-index: 2;
+    opacity: 0;
+  }
+  
+  .button:hover:after {
+    opacity: 1;
+  }
+  
+  .button span {
+    position: relative;
+    z-index: 3;
+  }
